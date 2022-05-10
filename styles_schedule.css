@@ -293,85 +293,103 @@ header{
 		margin-left: 15px;
 	}
 }
-
-/*тарифы*/
-.tarif{
-	background-color: #202021;
-	padding-bottom: 10%;
+/*расписание*/
+.background_schedule{
+    border-top:  3px solid #E89B2B;
+	border-bottom:  3px solid #E89B2B;
+    background-color: #202021;
+    padding-bottom: 10%;
 }
-.row_tarif{
-	display: flex;
-	flex-direction: row;
-
+.schedule_row{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    justify-content: space-between;
+}
+.schedule_block{
+    width: calc(100% / 12 * 4 - var(--offset));
+    margin-top: 70px;
+    
 
 }
+.schedule_block_img_pole{
+    background-image: url(img/Rectangle\ 9.png) ;
+    height: 150px;
 
-#background_napravlenie_dance_mix{
-	background-image: url(img/Rectangle\ 6.png);
-	width:calc(100% / 12 * 4 - var(--offset)); 
-	height: 400px;
-	margin-top: 100px;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	margin-right: 10px;
 }
-#background_napravlenie_children{
-	background-image: url(img/Rectangle\ 7.png);
-	width:calc(100% / 12 * 4 - var(--offset)); 
-	height: 400px;
-	margin-top: 100px;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	margin-right: 10px;
-}
+.schedule_block_img_children{
+    background-image: url(img/Rectangle\ 7.png) ;
+    height: 150px;
 
-#background_napravlenie_caribbean{
-	background-image: url(img/Rectangle\ 8.png);
-	width:calc(100% / 12 * 4 - var(--offset)); 
-	height: 400px;
-	margin-top: 100px;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	margin-right: 10px;
-}#background_napravlenie_pole{
-	background-image: url(img/Rectangle\ 9.png);
-	width:calc(100% / 12 * 4 - var(--offset)); 
-	height: 400px;
-	margin-top: 100px;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	margin-right: 10px;
-}#background_napravlenie_sky{
-	background-image: url(img/Rectangle\ 10.png);
-	width:calc(100% / 12 * 4 - var(--offset)); 
-	height: 400px;
-	margin-top: 100px;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	margin-right: 10px;
-}#background_napravlenie_hip{
-	background-image: url(img/Rectangle\ 11.png);
-	width:calc(100% / 12 * 4 - var(--offset)); 
-	height: 400px;
-	margin-top: 100px;
-	filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-	margin-right: 10px;
 }
-.background_title_napravlenie{
-	background-color: #202021;
-	width: 130px;
-	height: 40px;
-	/*я не знаю как выровнить этот блок*/
+.schedule_block_img_hip{
+    background-image: url(img/Rectangle\ 11.png) ;
+    height: 150px;
+
+}
+.schedule_block_img_caribbean{
+    background-image: url(img/Rectangle\ 8.png) ;
+    height: 150px;
+
+}
+.schedule_block_img_sky{
+    background-image: url(img/Rectangle\ 10.png) ;
+    height: 150px;
+    background-position: 55%;
+
+}
+.schedule_block_img_dance{
+    background-image: url(img/Rectangle\ 6.png) ;
+    height: 150px;
+    background-position: center;
+
 }
 .title_napravlenie{
 	font-family: 'Yanone Kaffeesatz';
 	font-style: normal;
 	font-weight: 600;
 	font-size: 38px;
-	line-height: 38px;
 	color: #FFFFFF;
+    width: 130px;
+   
+    background-color: #181819;
+}
+.schedule_block_date-time{
+    background: rgba(0, 0, 0, 0.38);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+    height: 230px;
+}
+.schedule_block_date-time_border{
+    background: rgba(0, 0, 0, 0.52);
+    border: 1px solid #E89B2B;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: auto;
+	width: 90%;
+	height: 95%;
+    /*а как сделать сверху отступ?*/
+}
+.schedule_block_text{
+    font-family: 'Yanone Kaffeesatz';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 38px;
+    line-height: 38px;
+    text-align: center;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 20px;
 }
 .row_button{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
-	align-items: flex-end;
-	height: 350px;
+    margin-top: 20px;
 }
 .button_zapis{
 	background-color: #E89B2B;
@@ -382,7 +400,6 @@ header{
     line-height: 29px;
 	border: 0px;
 	color: #FFFFFF;
-
 	padding-top: 5px;
 	padding-top: 5px;
 	padding-left: 10px;
@@ -410,221 +427,24 @@ header{
 	padding-right: 10px;
 	
 }
-/*адреса*/
-.adres_background{
-	background-image: url(img/background_adres.png);
-	width: 100%;
-	padding-bottom: 100px;
+.look_all{
+    margin-top: 100px;
+    border-top: 5px solid #404043;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 }
-.padding{
-	padding-top: 100px;
-	display: flex;
-	flex-direction: row;
-}
-.adres_block{
-	background: rgba(16, 16, 16, 0.86);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	width: calc(100% / 12 * 4 - var(--offset));
-	height: 300px;
-	margin-right: 10px;
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	justify-content: space-around;
-	/*почему один из блоков не выровнился?*/
-}
-.adres_text{
-	width: 250px;
-	margin-left: 50px;
-	margin-right: 50px;
-}
-.white_text_adres{
-	padding-top: 20px;
-font-family: 'Yanone Kaffeesatz';
-font-style: normal;
-font-weight: 600;
-font-size: 24px;
-line-height: 31px;
-color: #FFFFFF;
-text-align: left;
-}
-.orange_text_adres{
-font-family: 'Yanone Kaffeesatz';
-font-style: normal;
-font-weight: 300;
-font-size: 24px;
-line-height: 32px;
-text-align: justify;
-color: #C88930;
-}
-.row_adres{
-	display: flex;
-	flex-direction: row;
-align-items: center;
-margin-left: 20px;
-margin-top: 20px;
-}
-.icon_adres_telephone{
-	width: 35px;
-	margin-right: 10px;
-}
-.telephone_adres{
-	font-family: 'Yandex-UI-Icons-Private';
-font-style: normal;
-font-weight: 400;
-font-size: 18px;
-line-height: 23px;
-color: #FFFFFF;
-}
-/*абонементы*/
-.abonement_background{
-	background-color: #202021;
-	border-bottom: 3px solid #E89B2B;
-	padding-bottom: 10%;
-}
-.first_zaniatie__background{
-	margin-top: 50px;
-	margin-bottom: 50px;
-	background-image: url(img/Rectangle\ 44.png);
-	background-position: right;
-	width: 100%;
-	height: 200px;
-	border-bottom: 2px solid #E89B2B;
-}
-.first_zaniatie__titel{
-	font-family: 'Yanone Kaffeesatz';
+.look_all_text{
+    font-family: 'Yanone Kaffeesatz';
     font-style: normal;
     font-weight: 600;
-    font-size: 50px;
-    line-height: 59px;
-    color: #FFFFFF;
-    margin-left: calc(100% / 12 * 1 + var(--offset));
-    padding-top: 30px;
+    font-size: 38px;
+    line-height: 38px;
+    color: #404043;
 }
-.button_abonement{
-	background-color: #E89B2B;
-	font-family: 'Yanone Kaffeesatz';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 29px;
-	border: 0px;
-	color: #FFFFFF;
-	margin-left: calc(100% / 12 * 1 + var(--offset));
-	margin-top: 40px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-}
-.abonement_block_background1{
-	background-image: url(img/Rectangle\ 45.png);
-	background-position: center;
-	width: calc(100% / 12 * 4 - var(--offset));
-	height: 350px;
-	margin-right: 10px;
-	position: relative;
+.arrow_all{
+    margin-top: -10px;
 
-}
-.abonement_block_background2{
-	background-image: url(img/Rectangle\ 51.png);
-	background-position: center;
-	width: calc(100% / 12 * 4 - var(--offset));
-	height: 350px;
-	margin-right: 10px;
-	position: relative;
-
-}
-.abonement_block_background3{
-	background-image: url(img/Rectangle\ 53.png);
-	background-position: center;
-	width: calc(100% / 12 * 4 - var(--offset));
-	height: 350px;
-
-	position: relative;
-
-}
-.abonement_block_border{
-	background: rgba(0, 0, 0, 0.52);
-    border: 1px solid #E89B2B;
-    box-sizing: border-box;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	justify-content: space-around;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	margin: auto;
-	overflow: auto; 
-	width: 90%;
-	height: 90%;
-}
-.abonement_title{
-	font-family: 'Yanone Kaffeesatz';
-font-style: normal;
-font-weight: 700;
-font-size: 34px;
-line-height: 34px;
-color: #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-text-align: center;
-padding-top: 30px;
-}
-.abonement_text{
-	font-family: 'Yanone Kaffeesatz';
-font-style: normal;
-font-weight: 300;
-font-size: 19px;
-line-height: 19px;
-color: #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-text-align: left;
-padding-top: 10px;
-margin-left: 30px;
-}
-.abonement__row{
-	display: flex;
-	flex-direction: row;
-	align-items: flex-end;
-	margin-top: 15px;
-	
-}
-.abonement_price_white{
-font-family: 'Yanone Kaffeesatz';
-font-style: normal;
-font-weight: 700;
-font-size: 26px;
-margin-left: 10px;
-color: #FFFFFF;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.abonement_price_orange{
-font-family: 'Source Sans 3';
-font-style: normal;
-font-weight: 700;
-font-size: 30px;
-margin-left: 5px;
-color: #E89B2B;
-text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-.button_abonement2{
-	background-color: #E89B2B;
-	font-family: 'Yanone Kaffeesatz';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-	border: 0px;
-	color: #FFFFFF;
-	padding-top: 10px;
-	padding-left: 20px;
-	padding-right: 20px;
-	margin-left: 50px;
-}
-.row{
-	display: flex;
-	flex-direction: row;
 }
 /*футор*/
 .footer__background{
