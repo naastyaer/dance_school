@@ -45,8 +45,6 @@ html {
 	flex-wrap: wrap;
 	justify-content: flex-end;
     align-items: center;
-
-
 }
 .menu_component{
 	font-family: 'Yanone Kaffeesatz';
@@ -87,43 +85,19 @@ html {
 	text-decoration: none;
 }
 
-.title_block{
-	padding-top: 4%;
-	padding-bottom: 4%;
-	font-size: 30px;
-	color: #0369A1;
-	text-align: center;
-	font-weight: 700;
-	font-family: 'Open Sans', sans-serif;
-}
 @media (max-width: 600px){
-	.menu__navigation{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-	}
 	.menu_component{
-		font-family: 'Open Sans', sans-serif;
-		margin-right: 20px;
-		margin-left: -10px; 
+		font-family: 'Yanone Kaffeesatz';
+		margin-left: 20px;  
 		margin-top: 15px;
-		font-size: 28px;
-		font-weight:  600;
-		text-align: right;
-		color: white;
+		font-size: 36px;
+		font-weight:  400;
+		text-align: center;
+		color: #B9B5BD;
 		text-decoration: none;
 	}
 }
-@media (max-width: 900px){
-	.menu_component{
-		margin-right: 5px;
-		font-size: 24px;
-		margin-left: 5px;
-	}
-	.logo__navigation{
-		margin-left: 15px;
-	}
-}
+
 /*шапка*/
 header{
 	background-image: url(img/background.png);
