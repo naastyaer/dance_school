@@ -87,14 +87,28 @@ html {
 
 @media (max-width: 600px){
 	.menu_component{
-		font-family: 'Yanone Kaffeesatz';
-		margin-left: 20px;  
-		margin-top: 15px;
-		font-size: 36px;
-		font-weight:  400;
-		text-align: center;
-		color: #B9B5BD;
-		text-decoration: none;
+		font-size: 32px;
+		margin-top: 25px;
+	}
+	.menu__navigation{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		
+	}
+	.row_navigation {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		justify-content: space-between;
+		padding-bottom: 10px;
+	}
+	.container{
+		width: 350px;
+	}
+	.logo{
+		margin-top: 20px;
+		margin-bottom: 20px;
 	}
 }
 
@@ -233,42 +247,27 @@ header{
 	align-items: flex-end
 }
 @media (max-width: 600px){
+	header{
+		background-position: left;
+	}
 	.block_text_header{
-		max-width: 100%;
-		word-wrap: break-word;
-		padding-top: 10%;
-		margin-left: 15px;
+		width: 100%;
 	}
-
-
-    .block_opacity {
-    background-color: rgba(90, 89, 139, 0.232);
-    width: 100%;
-    height: 100%;
-    }
-}
-@media (max-width: 400px){
 	.text_header__title{
-		font-size: 30px;
-		text-align: left;
-		color: rgb(3, 3, 3);
-		font-weight:  Bold;
-		font-family: 'Open Sans', sans-serif;
 		margin-top: 10px;
+		margin-bottom: 10px;
+		margin-left: 10px;
+	}
+	#text_header__div__title{
+		width: 300px;	
+	}
+	.block_text_header2{
+		margin-top: 50px;
 	}
 
 }
-@media (max-width: 900px){
-	.text_header{
-		max-width: 70%;
-		margin-left: 15px;
-	}
-	.button{
-		margin-left: 15px;
-	}
-}
 
-/*тарифы*/
+/*направления*/
 .tarif{
 	background-color: #202021;
 	padding-bottom: 10%;
@@ -276,10 +275,8 @@ header{
 .row_tarif{
 	display: flex;
 	flex-direction: row;
-
-
+	flex-wrap: wrap;
 }
-
 #background_napravlenie_dance_mix{
 	background-image: url(img/Rectangle\ 6.png);
 	width:calc(100% / 12 * 4 - var(--offset)); 
@@ -384,6 +381,95 @@ header{
 	padding-right: 10px;
 	
 }
+@media (max-width: 600px){
+	.title{
+		margin: 0 auto;
+		padding-bottom: 30px;
+	}
+	.row_tarif{
+		flex-direction: column;
+	}
+	#background_napravlenie_dance_mix{
+		background-image: url(img/Rectangle\ 6.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	#background_napravlenie_children{
+		background-image: url(img/Rectangle\ 7.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	
+	#background_napravlenie_caribbean{
+		background-image: url(img/Rectangle\ 8.png);
+		width:calc(100% / 12 * 4 - var(--offset)); 
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}#background_napravlenie_pole{
+		background-image: url(img/Rectangle\ 9.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}#background_napravlenie_sky{
+		background-image: url(img/Rectangle\ 10.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}#background_napravlenie_hip{
+		background-image: url(img/Rectangle\ 11.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		
+	}
+	.row_button{
+		height: 60px;
+	}
+	.button_zapis{
+		padding-top: 11px;
+		padding-bottom: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.button_podrob{
+		padding-top: 9px;
+		padding-bottom: 8px;
+		padding-left: 20px;
+		padding-right: 20px;	
+	}
+	.title_napravlenie{
+		font-family: 'Yanone Kaffeesatz';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 32px;
+		padding-left: 10px;
+		color: #FFFFFF;
+	}
+	.background_title_napravlenie{
+		width: 155px;
+	}
+}
+
 /*адреса*/
 .adres_background{
 	background-image: url(img/background_adres.png);
@@ -450,6 +536,35 @@ font-size: 18px;
 line-height: 23px;
 color: #FFFFFF;
 }
+@media (max-width: 600px){
+	.padding{
+		padding-top: 100px;
+		display: flex;
+		flex-direction: column;
+	}
+	.adres_block{
+		width: 300px;
+		height: 350px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.adres_text{
+		width: 250px;
+		margin: 0 auto;	
+	}
+	.white_text_adres{
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+}
+
+
+
+
 /*абонементы*/
 .abonement_background{
 	background-color: #202021;
@@ -599,6 +714,52 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 .row{
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
+}
+@media (max-width: 600px){
+	.first_zaniatie__titel{
+		font-size: 32px;
+		margin-left: 10px;
+		padding-top: 70px;
+	}
+	.button_abonement{
+		margin-top: 0px;
+		margin-left: 10px;
+	}
+	.row{
+		flex-direction: column;
+	}
+	.abonement_block_background1{
+		background-image: url(img/Rectangle\ 45.png);
+		background-position: center;
+		width: 300px;
+		height: 350px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		position: relative;
+	
+	}
+	.abonement_block_background2{
+		background-image: url(img/Rectangle\ 51.png);
+		background-position: center;
+		width: 300px;
+		height: 350px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		position: relative;
+	
+	}
+	.abonement_block_background3{
+		background-image: url(img/Rectangle\ 53.png);
+		background-position: center;
+		width: 300px;
+		height: 350px;
+		margin: 0 auto;
+		position: relative;
+	}
+	.button_abonement2{
+		margin-left: 40px;
+	}
 }
 /*футор*/
 .footer__background{
@@ -637,9 +798,7 @@ margin-right: 10px;
 	width: 100%;
 	padding-bottom: 10%;
 }
-.footer_contacts{
-	margin-left: calc(100% / 12 * 3 - var(--offset));
-}
+
 .footer__menu_component{
 	font-family: 'Yinmar';
     font-style: normal;
@@ -658,6 +817,7 @@ color: #FFFFFF;
 margin-right: 10px;
 }
 .footer_contacts{
+	margin-left: calc(100% / 12 * 3 - var(--offset));
 	font-family: 'Yanone Kaffeesatz';
    font-style: normal;
    font-weight: 600;
@@ -684,4 +844,24 @@ span{
 	color: #FFFFFF;
 	margin-left: 30px;
 	text-align: right;
+}
+@media (max-width: 600px){
+	.footer_row{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+	.footer_row_2{
+		display: flex;
+		flex-direction: row;
+	}
+	.footer_contacts{
+		margin-left: 0px;
+		margin-top: 20px;
+	    font-size: 20px;
+	}
+	span{
+		font-size: 18px;
+	}
+
 }
