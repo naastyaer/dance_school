@@ -38,6 +38,7 @@ html {
 .background_navigation{
 	background-color: #202021;
     opacity: 0.8;
+	width: 100%;
 }
 .menu__navigation{
 	display: flex;
@@ -84,7 +85,31 @@ html {
 	color: #B9B5BD;
 	text-decoration: none;
 }
-
+@media (max-width: 900px){
+	.menu_component{
+		font-size: 32px;
+		margin-top: 25px;
+	}
+	.menu__navigation{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: center;
+		
+	}
+	.row_navigation {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-content: space-around;
+		padding-bottom: 10px;
+	}
+	.logo{
+		margin-top: 20px;
+		margin-bottom: 20px;
+		margin-left: 20px;
+	}
+}
 @media (max-width: 600px){
 	.menu_component{
 		font-size: 32px;
@@ -112,6 +137,7 @@ html {
 	}
 }
 
+
 /*шапка*/
 header{
 	background-image: url(img/background.png);
@@ -119,8 +145,8 @@ header{
     background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
-    max-width: 100%;
-	
+    width: 100%;
+	height:auto;
 }
 .header_row{
 	display: flex;
@@ -246,6 +272,7 @@ header{
 	flex-direction: row;
 	align-items: flex-end
 }
+
 @media (max-width: 600px){
 	header{
 		background-position: left;
@@ -380,6 +407,94 @@ header{
 	padding-left: 10px;
 	padding-right: 10px;
 	
+}
+@media (max-width: 900px){
+	.title{
+		padding-bottom: 30px;
+	}
+	.row_tarif{
+		display: flex;
+		flex-direction: row;
+	}
+	#background_napravlenie_dance_mix{
+		background-image: url(img/Rectangle\ 6.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	#background_napravlenie_children{
+		background-image: url(img/Rectangle\ 7.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}
+	
+	#background_napravlenie_caribbean{
+		background-image: url(img/Rectangle\ 8.png);
+		width:calc(100% / 12 * 4 - var(--offset)); 
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}#background_napravlenie_pole{
+		background-image: url(img/Rectangle\ 9.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}#background_napravlenie_sky{
+		background-image: url(img/Rectangle\ 10.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		margin-bottom: 20px;
+	}#background_napravlenie_hip{
+		background-image: url(img/Rectangle\ 11.png);
+		width: 300px; 
+		height: 400px;
+		padding-top: 300px;
+		filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+		margin: 0 auto;
+		
+	}
+	.row_button{
+		height: 60px;
+	}
+	.button_zapis{
+		padding-top: 11px;
+		padding-bottom: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+	.button_podrob{
+		padding-top: 9px;
+		padding-bottom: 8px;
+		padding-left: 20px;
+		padding-right: 20px;	
+	}
+	.title_napravlenie{
+		font-family: 'Yanone Kaffeesatz';
+		font-style: normal;
+		font-weight: 600;
+		font-size: 32px;
+		padding-left: 10px;
+		color: #FFFFFF;
+	}
+	.background_title_napravlenie{
+		width: 155px;
+	}
 }
 @media (max-width: 600px){
 	.title{
@@ -536,6 +651,24 @@ font-size: 18px;
 line-height: 23px;
 color: #FFFFFF;
 }
+@media (max-width: 900px){
+	.padding{
+		padding-top: 100px;
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+	.adres_block{
+		width: 350px;
+		height: 300px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}
+
 @media (max-width: 600px){
 	.padding{
 		padding-top: 100px;
@@ -716,7 +849,41 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	flex-direction: row;
 	flex-wrap: wrap;
 }
-@media (max-width: 600px){
+@media (max-width: 900px){
+	.abonement_block_background1{
+		background-image: url(img/Rectangle\ 45.png);
+		background-position: center;
+		width: 300px;
+		height: 350px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		position: relative;
+	
+	}
+	.abonement_block_background2{
+		background-image: url(img/Rectangle\ 51.png);
+		background-position: center;
+		width: 300px;
+		height: 350px;
+		margin: 0 auto;
+		margin-bottom: 20px;
+		position: relative;
+	
+	}
+	.abonement_block_background3{
+		background-image: url(img/Rectangle\ 53.png);
+		background-position: center;
+		width: 300px;
+		height: 350px;
+		margin: 0 auto;
+		position: relative;
+	}
+
+
+
+}
+
+@media (max-width: 600px) {
 	.first_zaniatie__titel{
 		font-size: 32px;
 		margin-left: 10px;
@@ -781,12 +948,12 @@ text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .text_footer_seti{
 	font-family: 'Yanone Kaffeesatz';
-font-style: normal;
-font-weight: 300;
-font-size: 32px;
-line-height: 32px;
-color: #B3AEAF;
-margin-right: 10px;
+	font-style: normal;
+	font-weight: 300;
+	font-size: 32px;
+	line-height: 32px;
+	color: #B3AEAF;
+	margin-right: 10px;
 }
 .footer_column{
 	display: flex;
@@ -845,7 +1012,37 @@ span{
 	margin-left: 30px;
 	text-align: right;
 }
-@media (max-width: 600px){
+@media (max-width: 900px) {
+	.footer_row{
+		display: flex;
+		flex-direction: row;
+		align-items: flex-end;
+		justify-content: space-around;
+	}
+	.footer_row_2{
+		display: flex;
+		flex-direction: row;
+	}
+	.footer_contacts{
+		margin-left: 0px;
+		margin-top: 20px;
+	    font-size: 20px;
+	}
+	span{
+		font-size: 18px;
+	}
+	.row_footer_seti{
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		padding-top: 30px;
+	}
+	.logo{
+		margin-left: 0px;
+	}
+
+}
+@media (max-width: 600px) {
 	.footer_row{
 		display: flex;
 		flex-direction: column;
@@ -862,6 +1059,9 @@ span{
 	}
 	span{
 		font-size: 18px;
+	}
+	.logo{
+		margin-left: 0px;
 	}
 
 }
