@@ -47,6 +47,79 @@ html {
 	justify-content: flex-end;
     align-items: center;
 }
+.menu__navigation_mobail{
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+    align-items: center;
+	display: none;
+}
+.menu__navigation_mobail_component{
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    align-items: center;
+	display: none;
+	margin-top: 30px;
+	height: 250px;
+	
+}
+/*АНИМИРОВАННАЯ КНОПКА МЕНЮ*/
+.menu-button {
+	width: 24px;
+	height: 24px;
+	position: relative;
+	transition: all 0.4s ease-in-out;
+	
+}
+
+/*  задаем размеры линий, переход transition для плавной анимации */
+.bar {
+	width: 24px;
+	height: 4px;
+	background-color: #E89B2B;;
+	border-radius: 4px;
+	position: absolute;
+	transition: all 0.4s ease-in-out;
+}
+
+/*  Берем три линии:
+	первую линию ставим вверху кнопки через абсолютное позиционирование,
+	последнюю - в конце,
+	и одну по центру (с учетом их ширины).
+	так мы имитируем иконку меню с тремя линиями */
+
+.bar1 {
+	top: 0;
+}
+.bar2 {
+	top: 10px;
+}
+.bar3 {
+	bottom: 0;
+}
+/* изначальная иконка готова! */
+
+
+
+
+
+/* Из двух оставшихся делаем крест (иконка "закрыть").
+   Изначально он не должен быть у нас виден, поэтому ставим ширину 0px
+*/
+
+.bar4 {
+	width: 0px;
+	transform: rotate(90deg); /* перевернет линию на 90 градусов и сделает горизонтальной */
+	top: 10px;
+	left: 10px; /* сместит линию на центр имитируемой кнопки, чтобы она появлялась из центральной точки  */
+}
+
+.bar5 {
+	width: 0px;
+	left: 10px;
+	top: 10px;  /* сместит линию на центр имитируемой кнопки, чтобы она появлялась из центральной точки  */
+}
 .menu_component{
 	font-family: 'Yanone Kaffeesatz';
 	margin-left: 20px;  
@@ -111,16 +184,18 @@ html {
 	}
 }
 @media (max-width: 600px){
+	.menu__navigation_mobail{
+		display: flex;
+	}
 	.menu_component{
 		font-size: 32px;
-		margin-top: 25px;
+		padding-top: 30px;
+		margin-top: 35px;
 	}
 	.menu__navigation{
-		display: flex;
-		flex-direction: column;
-		align-items: flex-end;
-		
+		display: none;
 	}
+
 	.row_navigation {
 		display: flex;
 		flex-wrap: wrap;
